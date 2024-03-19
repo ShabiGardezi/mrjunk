@@ -1,15 +1,17 @@
-import { Fragment } from 'react';
-import Footer from './footer';
+import { Fragment } from 'react'
+import Footer from './footer'
+import HeaderAbove from '../header/header-above'
 
-export * from '../../components/scroll';
+export * from '../../components/scroll'
 
 function Layout(props) {
-    return (
-        <Fragment>
-            <main>{props.children}</main>
-            <Footer />
-        </Fragment>
-    );
+  return (
+    <Fragment>
+      <HeaderAbove />
+      <main>{props.children}</main>
+      <Footer />
+    </Fragment>
+  )
 }
 
-export default Layout;
+export default Layout

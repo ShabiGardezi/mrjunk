@@ -23,7 +23,6 @@ function HomePage(props) {
   return (
     <Fragment>
       <NextSeo {...SEO} />
-      <HeaderAbove />
       <HeaderOne />
       <Hero heroItems={props.heroItems} />
       <Services services={props.services} />

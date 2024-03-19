@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { FaBars } from 'react-icons/fa'
+import { FaBars, FaCaretDown } from 'react-icons/fa'
 import { AiOutlineClose } from 'react-icons/ai'
 import { useState, useEffect, Fragment } from 'react'
 import { useRouter } from 'next/router'
@@ -9,8 +9,12 @@ import WhiteLogo from './white-logo'
 
 function HeaderOne() {
   const [offcanvas, setOffcanvas] = useState(false)
+  const [servicesOpen, setServicesOpen] = useState(false) // Initialize to false
+
   const showOffcanvas = () => setOffcanvas(!offcanvas)
-  // console.log("first");
+
+  const router = useRouter()
+
   useEffect(() => {
     window.addEventListener('scroll', isSticky)
     return () => {
@@ -24,7 +28,6 @@ function HeaderOne() {
     scrollTop >= 250 ? header.classList.add('is-sticky') : header.classList.remove('is-sticky')
   }
 
-  const router = useRouter()
   const headerCss = `flex lg:justify-between justify-end items-center`
   return (
     <Fragment>
@@ -36,45 +39,59 @@ function HeaderOne() {
                 <WhiteLogo />
               </div>
               <div className='lg:col-span-6 lg:block hidden ml-3'>
-                  <nav>
-                    <ul className='main-menu text-white'>
-                      <li className={router.pathname == '/' ? 'active' : ''}>
-                        {console.log(router.pathname)}
-                        <Link href='/'>
-                          <span>Home</span>
-                        </Link>
-                      </li>
-                      {console.log(router.pathname)}
+                <nav>
+                  <ul className='main-menu text-white'>
+                    <li className={router.pathname == '/' ? 'active' : ''}>
+                      <Link href='/'>
+                        <span>Home</span>
+                      </Link>
+                    </li>
 
-                      <li className={router.pathname == '/about' ? 'active' : ''}>
-                        <Link href='/about'>
-                          <span>About</span>
-                        </Link>
-                      </li>
-                      <li className={router.pathname == '/projects' ? 'active' : ''}>
-                        {console.log(router.pathname)}
-
-                        <Link href='#services'>
-                          <span>Services</span>
-                        </Link>
-                      </li>
-                      <li className={router.pathname == '/posts' ? 'active' : ''}>
-                        <Link href='#testimonials'>
-                          <span>Testimonials</span>
-                        </Link>
-                      </li>
-                      <li className={router.pathname == '/posts' ? 'active' : ''}>
-                        <a href='mailto:dan@mrjunkaway.com'>
-                          <span>Request Quote</span>
-                        </a>
-                      </li>
-                      <li className={router.pathname == '/contact' ? 'active' : ''}>
-                        <Link href='#footer'>
-                          <span>Contact</span>
-                        </Link>
-                      </li>
-                    </ul>
-                  </nav>
+                    <li className={router.pathname == '/about' ? 'active' : ''}>
+                      <Link href='#about'>
+                        <span>About</span>
+                      </Link>
+                    </li>
+                    <li
+                      onMouseEnter={() => setServicesOpen(true)}
+                      // onMouseLeave={() => setServicesOpen(false)}
+                      className={router.pathname.startsWith('/services') ? 'active' : ''}
+                    >
+                      <Link href='#services'>
+                        <span>Services</span>
+                      </Link>
+                      {servicesOpen && (
+                        <ul className='sub-menu'>
+                          {OffcanvasData.find(item => item.title === 'Services').subcategories.map(
+                            (subcategory, subIndex) => (
+                              <li
+                                key={subIndex}
+                                className={router.pathname.startsWith(subcategory.path) ? 'active' : ''}
+                              >
+                                <Link href={subcategory.path}>{subcategory.title}</Link>
+                              </li>
+                            )
+                          )}
+                        </ul>
+                      )}
+                    </li>
+                    <li className={router.pathname == '/posts' ? 'active' : ''}>
+                      <Link href='#testimonials'>
+                        <span>Testimonials</span>
+                      </Link>
+                    </li>
+                    <li className={router.pathname == '/posts' ? 'active' : ''}>
+                      <a href='mailto:dan@mrjunkaway.com'>
+                        <span>Request Quote</span>
+                      </a>
+                    </li>
+                    <li className={router.pathname == '/contact' ? 'active' : ''}>
+                      <Link href='#footer'>
+                        <span>Contact</span>
+                      </Link>
+                    </li>
+                  </ul>
+                </nav>
               </div>
               <div className='lg:col-span-3 col-span-6'>
                 <div className={`outer-box ${headerCss}`}>

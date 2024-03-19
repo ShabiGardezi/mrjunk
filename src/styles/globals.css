@@ -46,8 +46,16 @@ textarea:focus-visible {
 /*  - header
 /*----------------------------------------*/
 .main-menu {
-  @apply flex justify-start uppercase leading-8 text-[14px];
+  @apply flex justify-start uppercase text-[14px];
 }
+.sub-menu {
+  position: absolute;
+  top: 30%;
+  left: 10;
+  margin-top: 30px;
+  z-index: 10; /* Ensure it appears above other elements */
+}
+
 .main-menu li a {
   @apply block pr-[45px];
 }

@@ -11,8 +11,12 @@ export const OffcanvasData = [
   },
   {
     title: "Services",
-    path: "/services",
-    cName: "offcanvas-text",
+    cName: "offcanvas-text dropdown",
+    subcategories: [
+      { title: "Residential Services", path: "/services/residential" },
+      { title: "Commercial Services", path: "/services/commercial" },
+      { title: "Realtor Services", path: "/services/realtor" },
+    ],
   },
   {
     title: "Reviews",
