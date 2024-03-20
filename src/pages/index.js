@@ -5,7 +5,6 @@ import Hero from '../components/home-page/hero'
 import Services from '../components/home-page/services'
 import About from '../components/home-page/about'
 import Testimonial from '../components/home-page/testimonial'
-import Craigslist from '../components/home-page/craigslist'
 import LatestProject from '../components/home-page/latest-project'
 import SEO from '../../next-seo.config.js'
 import { NextSeo } from 'next-seo'
@@ -26,7 +25,6 @@ function HomePage(props) {
       <HeaderOne />
       <Hero heroItems={props.heroItems} />
       <Services services={props.services} />
-      <Craigslist />
       <LatestProject projects={props.projects} />
       <About about={props.logo} />
       <Testimonial testimonialItems={props.testimonialItems} />

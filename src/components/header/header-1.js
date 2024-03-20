@@ -43,7 +43,7 @@ function HeaderOne() {
                   <ul className='main-menu text-white'>
                     <li className={router.pathname == '/' ? 'active' : ''}>
                       <Link href='/'>
-                        <span className="transition-transform duration-300 hover:scale-90" >Home</span>
+                        <span className='transition-transform duration-300 hover:scale-90'>Home</span>
                       </Link>
                     </li>
 
@@ -54,7 +54,7 @@ function HeaderOne() {
                     </li>
                     <li
                       onMouseEnter={() => setServicesOpen(true)}
-                      // onMouseLeave={() => setServicesOpen(false)}
+                      onMouseLeave={() => setServicesOpen(false)}
                       className={router.pathname.startsWith('/services') ? 'active' : ''}
                     >
                       <Link href='#services'>
@@ -62,19 +62,25 @@ function HeaderOne() {
                       </Link>
                       {servicesOpen && (
                         <ul className='sub-menu'>
-                          {OffcanvasData.find(item => item.title === 'Services').subcategories.map(
-                            (subcategory, subIndex) => (
+                          {/* Render only the first three services */}
+                          {OffcanvasData.find(item => item.title === 'Services')
+                            .subcategories.slice(0, 3)
+                            .map((subcategory, subIndex) => (
                               <li
                                 key={subIndex}
                                 className={router.pathname.startsWith(subcategory.path) ? 'active' : ''}
                               >
-                                <Link href={subcategory.path}> <span className="transition-transform duration-300 hover:text-lg">{subcategory.title}</span></Link>
+                                <Link href={subcategory.path}>
+                                  <span className='transition-transform duration-300 hover:text-lg'>
+                                    {subcategory.title}
+                                  </span>
+                                </Link>
                               </li>
-                            )
-                          )}
+                            ))}
                         </ul>
                       )}
                     </li>
+
                     <li className={router.pathname == '/posts' ? 'active' : ''}>
                       <Link href='#testimonials'>
                         <span>Testimonials</span>

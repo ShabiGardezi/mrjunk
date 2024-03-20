@@ -3,20 +3,23 @@ import Link from 'next/link'
 import { OffcanvasData } from '../header/offcanvas-data' // Import data
 
 const ResidentialServicesCards = () => {
-  // Efficiently find residential services subcategory
-  const residentialServices = OffcanvasData.find(item => item.title === 'Services' && item.subcategories)
+  // Find the "Services" category
+  const servicesCategory = OffcanvasData.find(item => item.title === 'Services')
 
-  // Extract residential services (if found)
-  const servicesData = residentialServices?.subcategories?.slice(3, 15) // Get services 4-14 (assuming 3 'Services' items)
+  // Find the "Residential Services" subcategory under "Services" category
+  const residentialServices = servicesCategory?.subcategories.find(sub => sub.title === 'Residential Services')
+
+  // Extract subServices data (if "Residential Services" is found)
+  const subServicesData = residentialServices?.subServices
 
   // Handle potential undefined values gracefully
-  if (!servicesData) {
+  if (!subServicesData) {
     return <p>Loading residential services...</p> // Or display a placeholder
   }
 
   return (
     <div className='grid grid-cols-1 md:grid-cols-3 gap-4' style={{ margin: '10px' }}>
-      {servicesData.map((service, index) => (
+      {subServicesData.map((service, index) => (
         <div key={index} className='bg-white shadow-md rounded-lg overflow-hidden'>
           <Link href={service.path}>
             <div style={{ textAlign: 'center', fontWeight: 'bold', fontSize: '18px' }}>
