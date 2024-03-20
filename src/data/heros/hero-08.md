@@ -1,6 +1,6 @@
 ---
 title: Hero Image
-image: /bg-image-fifteen.jpg
+image: /junkremoval-8.jpg
 heroYear: 2022
 twitterIcon: "FaTwitter"
 facebookIcon: "FaFacebookF"

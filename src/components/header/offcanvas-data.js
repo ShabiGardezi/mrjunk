@@ -81,6 +81,18 @@ export const OffcanvasData = [
             description: 'Effortless Wood Removal Services Albuquerque for a Clutter-Free Space',
             path: '/services/residential/woodremoval'
           }
+          ,
+          {
+            title: 'Tree and Branch Removal',
+            description: 'Efficient Branch and Tree Removal Service Albuquerque',
+            path: '/services/residential/treeandbranchremoval'
+          }
+          ,
+          {
+            title: 'Yard Debris and Yard Waste Removal',
+            description: 'Transform Your Yard with Our Expert Debris and Waste Removal Service',
+            path: '/services/residential/yarddebrisandyardwasteremoval'
+          }
         ]
       },
       { title: 'Commercial Services', path: '/services/commercial' },
