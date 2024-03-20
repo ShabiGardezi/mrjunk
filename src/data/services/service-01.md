@@ -1,5 +1,5 @@
 ---
-title: "Residential"
+title: "Residential Services"
 icon: "IoHome"
 path: "services/residential"
 ---
