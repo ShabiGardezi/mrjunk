@@ -1,6 +1,6 @@
 ---
 title: Hero Image
-image: /two.jpg
+image: /pallet-removal.jpg
 heroYear: 2022
 twitterIcon: "FaTwitter"
 facebookIcon: "FaFacebookF"

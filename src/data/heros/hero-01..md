@@ -1,6 +1,6 @@
 ---
 title: Hero Image
-image: /one.jpg
+image: /couch-removal.png
 heroYear: 2022
 twitterIcon: "FaTwitter"
 facebookIcon: "FaFacebookF"

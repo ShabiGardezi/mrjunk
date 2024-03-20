@@ -1,6 +1,6 @@
 ---
 title: Hero Image
-image: /3.jpg
+image: /hero-05.md
 heroYear: 2022
 twitterIcon: "FaTwitter"
 facebookIcon: "FaFacebookF"

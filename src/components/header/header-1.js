@@ -43,7 +43,7 @@ function HeaderOne() {
                   <ul className='main-menu text-white'>
                     <li className={router.pathname == '/' ? 'active' : ''}>
                       <Link href='/'>
-                        <span>Home</span>
+                        <span className="transition-transform duration-300 hover:scale-90" >Home</span>
                       </Link>
                     </li>
 
@@ -68,7 +68,7 @@ function HeaderOne() {
                                 key={subIndex}
                                 className={router.pathname.startsWith(subcategory.path) ? 'active' : ''}
                               >
-                                <Link href={subcategory.path}>{subcategory.title}</Link>
+                                <Link href={subcategory.path}> <span className="transition-transform duration-300 hover:text-lg">{subcategory.title}</span></Link>
                               </li>
                             )
                           )}

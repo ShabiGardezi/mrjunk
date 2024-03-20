@@ -48,6 +48,13 @@ textarea:focus-visible {
 .main-menu {
   @apply flex justify-start uppercase text-[14px];
 }
+.main-menu li{
+  @apply font-bold text-red-400 ;
+}
+.main-menu li span:hover {
+  @apply text-lg; /* Example: increase text size to 1.25rem on hover */
+}
+
 .sub-menu {
   position: absolute;
   top: 30%;
@@ -55,17 +62,24 @@ textarea:focus-visible {
   margin-top: 30px;
   z-index: 10; /* Ensure it appears above other elements */
 }
+.sub-menu li {
+  margin-bottom: -50px;
+  @apply font-bold text-red-400 ; /* Apply negative margin to remove space between li elements */}
+  .sub-menu li span:hover {
+    @apply text-lg; /* Example: increase text size to 1.25rem on hover */
+  }
+
 
 .main-menu li a {
   @apply block pr-[45px];
 }
-.main-menu li a span {
+/* .main-menu li a span {
   @apply relative block before:absolute before:left-0 before:bottom-0 before:right-0 before:h-[1px] before:opacity-0 before:bg-white before:transform before:scale-x-[0.2] before:transition before:duration-500 hover:before:opacity-100 hover:before:scale-x-100;
   font-size: 17px;
-}
-.main-menu li.active a span {
+} */
+ .main-menu li.active a span {
   @apply before:opacity-100 before:scale-x-100;
-}
+} 
 .main-menu .navigation > li > ul {
   padding: 20px 15px;
   border-radius: 10px;
