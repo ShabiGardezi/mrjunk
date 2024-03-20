@@ -95,7 +95,74 @@ export const OffcanvasData = [
           }
         ]
       },
-      { title: 'Commercial Services', path: '/services/commercial' },
+      {
+        title: 'Commercial Services',
+        path: '/services/commercial',
+        subServices: [
+          // Add 12 services for Residential Services
+          {
+            title: 'Appliance Removal',
+            description: 'No More Clutter: Junk Appliance Removal Services in Albuquerque',
+            path: '/services/residential/applianceremoval'
+          },
+          {
+            title: 'Backyard Junk Removal',
+            description: 'Reclaim Your Place with Expert Backyard Trash Removal Albuquerque',
+            path: '/services/residential/backyardjunkremoval'
+          },
+          {
+            title: 'Cement and Asphalt Removal',
+            description: 'Effortless Cement and Asphalt Removal for Clear Surfaces',
+
+            path: '/services/residential/cementandasphaltremoval'
+          },
+          {
+            title: 'Cinder Block Removal',
+            description: 'Smart & Efficient Cinder Block Removal in Albuquerque NM',
+            path: '/services/residential/cinderblockremoval'
+          },
+          {
+            title: 'Couch Removal',
+            description: 'Farewell to Your Old Couch in Albuquerque with Zia Later',
+            path: '/services/residential/couchremoval'
+          },
+          {
+            title: 'Furniture Removal',
+            description: 'Streamline Your Space with Professional Old Furniture Removal in Albuquerque',
+            path: '/services/residential/furnitureremoval'
+          },
+          {
+            title: 'Hoarder Cleanups',
+            description: 'Compassionate Hoarder Junk Cleanup in Albuquerque for a Fresh Startup',
+            path: '/services/residential/hoardercleanups'
+          },
+          {
+            title: 'Hot Tub Removal',
+            description: 'Effortless Hot Tub Removal and Disposal service Albuquerque',
+            path: '/services/residential/hottubremoval'
+          },
+          {
+            title: 'Home Remodel Junk Removal',
+            description: 'Streamline Your Home Remodel with Expert Junk Removal',
+            path: '/services/residential/homeremodeljunkremoval'
+          },
+          {
+            title: 'Mattress Removal',
+            description: 'Hassle-Free Mattress removal Service in Albuquerque',
+            path: '/services/residential/mattressremoval'
+          },
+          {
+            title: 'Shed Junk Removal',
+            description: 'Clear Your Space and Restore Order with Shed Junk Removal Services in Albuquerque',
+            path: '/services/residential/shedjunkremoval'
+          },
+          {
+            title: 'Wood Removal',
+            description: 'Effortless Wood Removal Services Albuquerque for a Clutter-Free Space',
+            path: '/services/residential/woodremoval'
+          }
+        ]
+      },
       { title: 'Realtor Services', path: '/services/realtor' }
     ]
   },

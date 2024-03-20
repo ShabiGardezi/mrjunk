@@ -1,7 +1,7 @@
 import React from 'react'
 import { OffcanvasData } from '../header/offcanvas-data'
 import Image from 'next/image'
-
+Image
 export default function Craigslist() {
   // Get the first three services from OffcanvasData
   const services = OffcanvasData.slice(0, 3)

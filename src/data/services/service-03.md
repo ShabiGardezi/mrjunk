@@ -1,5 +1,5 @@
 ---
-title: "Commercial & Self-storage"
+title: "Commercial Services"
 icon: "IoBusinessSharp"
 ---
 
