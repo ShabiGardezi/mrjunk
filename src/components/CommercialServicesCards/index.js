@@ -28,7 +28,7 @@ const CommercialServicesCards = () => {
                 <h2>{service.title}</h2>
               </div>
               <img
-                src={`/images/residential-services/residential-services${index + 1}.jpg`} // Adjust image paths as needed
+                src={`/images/commercial-services/commercial-services${index + 1}.jpg`} // Adjust image paths as needed
                 alt={service.title}
                 className='w-full h-300 object-cover object-center'
               />
