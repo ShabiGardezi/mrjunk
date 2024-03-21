@@ -6,7 +6,7 @@
               <div className='container'>
                   <div className='banner-content pb-[80px] relative'>
                       <span className='text-[18px] leading-[29px] text-white uppercase max-w-[225px] block'>
-                          Nordic interior studio
+                          Nordic interior 
                       </span>
                       <h2 className='sm:text-[100px] text-[30px] sm:leading-[110px] text-white max-w-[320px]'>
                           About Us

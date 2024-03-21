@@ -9,6 +9,9 @@ import Brand from "../components/home-page/brand";
 import PageBanner from "../components/page-banner/index";
 import Team from "../components/team";
 import { createClient } from "next-sanity";
+import TitleWithText from "@/components/TitleWithText";
+import backgroundImage from '../../public/images/service/img-seven.jpg'
+
 
 const client = createClient({
   projectId: "3ykwrou0",
@@ -24,7 +27,9 @@ function AboutPage(props) {
         <title>About</title>
       </Head>
       <HeaderOne />
-      <PageBanner />
+      <TitleWithText 
+      title='About'
+      backgroundImage={backgroundImage.src} />
       <About about={props.logo} />
       <Services services={props.services} />
       <Testimonial testimonialItems={props.testimonialItems} />
