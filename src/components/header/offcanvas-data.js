@@ -169,7 +169,42 @@ export const OffcanvasData = [
           }
         ]
       },
-      { title: 'Realtor Services', path: '/services/realtor' }
+      { title: 'Realtor Services',
+       path: '/services/realtor',
+       subServices: [
+        // Add 12 services for Residential Services
+        {
+          title: 'Apartment Cleanouts',
+          description: 'Hassle-free Apartment Cleanouts Services Albuquerque',
+          path: '/services/realtor/apartmentcleanouts'
+        },
+        {
+          title: 'Foreclosure Junk Removal',
+          description: 'Swift Foreclosure Junk Removal to Simplify Property Transitions',
+          path: '/services/realtor/foreclosurejunkremoval'
+        },
+        {
+          title: 'Garage Cleanouts',
+          description: 'Clean Out Your Garage and Transform It into a Relaxing Oasis',
+
+          path: '/services/realtor/garagecleanouts'
+        },
+        {
+          title: 'Hoarder Junk Removal',
+          description: 'Compassionate Hoarder Junk Removal for a Fresh Start',
+          path: '/services/realtor/hoarderjunkremoval'
+        },
+        {
+          title: 'Rental Property Junk Removal',
+          description: 'Effortless Junk Removal Solutions for Rental Property Owners',
+          path: '/services/realtor/rentalpropertyjunkremoval'
+        },
+        {
+          title: 'Tenant Junk Removal',
+          description: 'Reliable junk removal services for satisfied tenants every time',
+          path: '/services/realtor/tenantjunkremoval'
+        }
+      ]}
     ]
   },
   {

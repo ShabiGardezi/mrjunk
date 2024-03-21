@@ -64,7 +64,7 @@ textarea:focus-visible {
 }
 .sub-menu li {
   margin-bottom: -50px;
-  @apply font-bold text-red-400; /* Apply negative margin to remove space between li elements */
+  @apply font-bold text-red-500; /* Apply negative margin to remove space between li elements */
 }
 .sub-menu li span:hover {
   @apply text-lg; /* Example: increase text size to 1.25rem on hover */
