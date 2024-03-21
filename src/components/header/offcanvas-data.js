@@ -8,7 +8,7 @@ export const OffcanvasData = [
   },
   {
     title: 'About',
-    path: '/about',
+    path: '/aboutus',
     cName: 'offcanvas-text'
   },
   {

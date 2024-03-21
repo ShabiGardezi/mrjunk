@@ -48,7 +48,7 @@ function HeaderOne() {
                     </li>
 
                     <li className={router.pathname == '/about' ? 'active' : ''}>
-                      <Link href='#about'>
+                      <Link href='/aboutus'>
                         <span>About</span>
                       </Link>
                     </li>
