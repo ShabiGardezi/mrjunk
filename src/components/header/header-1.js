@@ -82,7 +82,8 @@ function HeaderOne() {
                     </li>
 
                     <li className={router.pathname == '/posts' ? 'active' : ''}>
-                      <Link href='#testimonials'>
+                      <Link href='/#testimonials'>
+                        {' '}
                         <span>Testimonials</span>
                       </Link>
                     </li>
@@ -135,9 +136,37 @@ function HeaderOne() {
               </button>
             </li>
             {OffcanvasData.map((item, index) => {
+              // Determine the target URL based on the item title
+              let targetUrl = ''
+              switch (item.title) {
+                case 'Home':
+                  targetUrl = '#'
+                  break
+                case 'About':
+                  targetUrl = '/aboutus'
+                  break
+                case 'Services':
+                  targetUrl = '/#services' // Scroll to the Services section on the home page
+                  break
+                case 'Reviews':
+                  targetUrl = '/#testimonials' // Scroll to the Reviews section on the home page
+                  break
+                case 'Request Quote':
+                  targetUrl = '/#contact' // Scroll to the Request Quote section on the home page
+                  break
+                case 'Contact':
+                  targetUrl = '/#footer'
+                  break
+                default:
+                  // Handle any other titles not matched in the switch statement
+                  targetUrl = '#' // Fallback behavior (optional)
+              }
+
               return (
                 <li key={index} className={item.cName}>
-                  <Link href='#'>{item.title}</Link>
+                  <Link href={targetUrl}>
+                    <span>{item.title}</span>
+                  </Link>
                 </li>
               )
             })}

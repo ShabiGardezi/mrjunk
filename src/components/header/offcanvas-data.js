@@ -214,7 +214,7 @@ export const OffcanvasData = [
   },
   {
     title: 'Request quote',
-    path: '/request-quote',
+    path: '/contact',
     cName: 'offcanvas-text'
   },
   {
