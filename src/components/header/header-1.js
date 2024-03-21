@@ -31,7 +31,7 @@ function HeaderOne() {
   const headerCss = `flex lg:justify-between justify-end items-center`
   return (
     <Fragment>
-      <header className='absolute w-full z-10'>
+      <header className='absolute w-full z-50'>
         <div className='sticky-holder header-section sticky-style-1'>
           <div className='custom-container container'>
             <div className='grid grid-cols-12 items-center leading-[120px]'>
@@ -86,10 +86,10 @@ function HeaderOne() {
                         <span>Testimonials</span>
                       </Link>
                     </li>
-                    <li className={router.pathname == '/posts' ? 'active' : ''}>
-                      <a href='mailto:dan@mrjunkaway.com'>
+                    <li className={router.pathname == '/contact' ? 'active' : ''}>
+                      <Link href='#footer'>
                         <span>Request Quote</span>
-                      </a>
+                      </Link>
                     </li>
                     <li className={router.pathname == '/contact' ? 'active' : ''}>
                       <Link href='#footer'>
